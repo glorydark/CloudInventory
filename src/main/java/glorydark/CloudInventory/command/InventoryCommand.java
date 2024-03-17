@@ -132,15 +132,16 @@ public class InventoryCommand extends Command {
                 }
                 break;
             case "setmaxslot":
-                if (commandSender instanceof Player) {
-                    if (commandSender.isOp() || !commandSender.isPlayer()) {
-                        if (strings.length == 3) {
-                            String player = strings[1];
-                            int initialCount = CloudBag.getMaxCloudSlot(player);
-                            int count = Integer.parseInt(strings[2]);
-                            CloudBag.setMaxCloudSlot(player, count);
-                            commandSender.sendMessage(Lang.getTranslation("Message.SlotChange").replace("%initial_count%", String.valueOf(initialCount)).replace("%current_count%", String.valueOf(initialCount)));
-                        }
+                if (commandSender.isOp() || !commandSender.isPlayer()) {
+                    if (strings.length == 3) {
+                        String player = strings[1];
+                        int initialCount = CloudBag.getMaxCloudSlot(player);
+                        int count = Integer.parseInt(strings[2]);
+                        CloudBag.setMaxCloudSlot(player, count);
+                        commandSender.sendMessage(Lang.getTranslation("Message.SlotChange")
+                                .replace("%player%", player)
+                                .replace("%initial_count%", String.valueOf(initialCount))
+                                .replace("%current_count%", String.valueOf(count)));
                     }
                 }
                 break;

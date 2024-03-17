@@ -31,4 +31,4 @@ Message:
   GiveAllOnlinePlayerItemSuccessfully: 成功给予所有玩家 %ItemName%
   CloudInventoryIsEmpty: 您的云背包为空
   InventoryIsEmpty: 您的云背包为空
-  SlotChange: 您的云背包格数已更：%initial_count% -> %current_count%
+  SlotChange: 玩家 %player% 的云背包格数已更新：%initial_count% -> %current_count%
