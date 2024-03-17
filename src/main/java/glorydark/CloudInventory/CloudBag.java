@@ -115,6 +115,5 @@ public class CloudBag {
         Config config = new Config(CloudInventoryMain.plugin.getDataFolder() + "/players/" + p + ".yml");
         config.set("InventorySlots", count);
         config.save();
-
     }
 }
